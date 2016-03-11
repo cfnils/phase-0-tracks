@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Practice Form</title>
+</head>
+<body>
+  <h1> Song Preference Form </h1>
+  <form name="song preference" action="success.html" method="post">
+    
+    <div>
+      <label>What's Your Name?</label>
+      <input type="text" name="name">
+    </div>
+
+    <div>
+      <label> Date of Birth</label>
+      <input type="date" name="dob">
+    </div>
+
+    <div>
+      <label> Which of these songs do you like best?</label>
+      <select name="best">
+        <option selected disabled>Select Song</option>
+        <option value="cut">Cut It by O.T. Genasis</option>
+        <option value="really">Really Really by Kevin Gates</option>
+        <option value="panda">Panda by Desiigner</option>
+        <option value="nah">None of the above</option>
+      </select>
+    </div>
+
+    <div>
+      <label> Please Pick the Best Choice:</label><br>
+        <input type="radio" name="choice" value="old">I like CLASSIC hip hop<br>
+        <input type="radio" name="choice" value="new">I like NEW hip hop<br>
+        <input type="radio" name="choice" value="dont">I don't like hip hop that much<br>
+    </div>
+
+    <div>
+      <label> Please tell us your top musical artists:</label>
+      <textarea name="topartists" rows="10" cols="50"> please place artists below (one artist per line)</textarea>
+    </div>
+
+    <div>
+      <button type="submit">Submit your preferences</button>
+    </div>
+
+  </form>
+</body>
+</html>
