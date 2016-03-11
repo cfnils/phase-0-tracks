@@ -6,7 +6,7 @@
 * <input type= "password"> - input type is password (will dot out your entry)
 * <select> - dropdown box type
 * <option value="road"> Road </option> - dropdown box road option
-* <option value="road"> Mountain</option> - dropdown box mountain option
-* <option value="road"> Cyclocross</option> - dropdown box cyclecross option
+* <option value="mountain"> Mountain</option> - dropdown box mountain option
+* <option value="cyclocross"> Cyclocross</option> - dropdown box cyclocross option
 * <input type="date" name="date"> - input type is date
 * <button type="submit"> Save this adventure</button> - button type is submit
