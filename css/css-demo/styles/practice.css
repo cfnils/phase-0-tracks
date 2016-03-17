@@ -20,7 +20,7 @@
 	background-color: yellow;
 }
 
-/* here;s me selecting the child element of another element, (all 
+/* here's me selecting the child element of another element, (all 
 h3's inside a section) */
 section h3{
 	font-size: 90%;
