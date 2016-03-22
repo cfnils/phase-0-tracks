@@ -1,0 +1,29 @@
+Elevator Algorithm
+
+-until you are on the elevator
+    -If elevator doors are open
+        -go onto the elevator
+    -otherwise:
+        -press elevator call button
+-look at the bottom floor button
+-until you find your desired floor
+    -look to see if the button has your desired floor written on it
+    -go up to the next button above    
+-press the button 
+-if screen shows desired floor and doors are open
+    -exit elevator    
+
+
+ Make a Ham Sandwich
+
+-if fridge contains bread and ham and mayo
+    -take out bread and ham and mayo and place on counter
+    -take out plate from cupboard
+    -take out one butter knife from the drawer
+    -take out 2 slices of bread from the bag
+    -take out 10 slices of ham from ham packaging
+    -place one slice of bread on the plate
+    -place 10 slices of ham on bread thats on plate
+    -using the butter knife put mayo on 2nd piece of bread and place on top of ham
+-otherwise:
+    -say, I cant make lunch, do you want to order pizza?
