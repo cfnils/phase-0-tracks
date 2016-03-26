@@ -22,6 +22,12 @@ while  which_employee <= how_many.to_i
 	puts "Would you like to enroll in the company's health insurance? (y/n)"
 	insurance = gets.chomp
 
+	puts "Please let us know your allergies, and type 'done' when complete"
+	allergies = ""
+	while allergies != "sunshine" && allergies != "done"
+		allergies = gets.chomp
+	end	
+
 	vampire_status = nil
 
 	if old.to_i == (2016 - year.to_i) && (garlic == "y" || insurance == "y")
@@ -37,6 +43,10 @@ while  which_employee <= how_many.to_i
 		vampire_status = "Definitely a vampire."
 	end
 
+	if allergies == "sunshine"
+		vampire_status = "Probably a vampire."
+	end
+
 	if !vampire_status
 		puts "Results inconclusive"
 	else
@@ -47,3 +57,6 @@ while  which_employee <= how_many.to_i
 end
 
 puts "Employee processing complete!"
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
+exit
