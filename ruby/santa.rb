@@ -23,9 +23,24 @@ class Santa
 		puts "age is #{@age}"
 	end
 
+	def celebrate_birthday
+		@age +=1
+	end
+
+	def get_mad_at(reindeer)
+		@reindeer_ranking.push(reindeer).slice!(@reindeer_ranking.find_index(reindeer))
+	end
+
 end
 
 doofus = Santa.new("male", "Asian")
 doofus.speak
 doofus.eat_milk_and_cookies("chocolate chip cookie")
 doofus.about
+
+guy = Santa.new("male", "black")
+guy.about
+guy.celebrate_birthday
+guy.about
+guy.get_mad_at("Rudolph")
+guy.about
