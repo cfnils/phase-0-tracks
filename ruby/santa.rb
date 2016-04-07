@@ -1,4 +1,7 @@
 class Santa
+	attr_reader :ethnicity
+	attr_accessor :gender
+
 	def initialize(gender, ethnicity)
 		puts "Initializing Santa instance"
 		@gender = gender
@@ -35,13 +38,16 @@ class Santa
 		@reindeer_ranking.push(reindeer).slice!(@reindeer_ranking.index(reindeer))
 	end
 
-	def gender
-		@gender
-	end
+	#getter code below, now not needed because I used 
+	#attr_reader and attr_accessor at the top
+	
+	# def gender
+	# 	@gender
+	# end
 
-	def ethnicity
-		@ethnicity
-	end
+	# def ethnicity
+	# 	@ethnicity
+	# end
 end
 
 doofus = Santa.new("male", "Asian")
