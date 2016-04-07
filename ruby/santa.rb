@@ -27,10 +27,21 @@ class Santa
 		@age +=1
 	end
 
+	#all these options seemed to work, i commented out 2 but left them in case
+	#one method is better than another
 	def get_mad_at(reindeer)
-		@reindeer_ranking.push(reindeer).slice!(@reindeer_ranking.find_index(reindeer))
+		#@reindeer_ranking.push(reindeer).slice!(@reindeer_ranking.find_index(reindeer))
+		#@reindeer_ranking.insert(-1, @reindeer_ranking.delete(reindeer))
+		@reindeer_ranking.push(reindeer).slice!(@reindeer_ranking.index(reindeer))
 	end
 
+	def gender
+		@gender
+	end
+
+	def ethnicity
+		@ethnicity
+	end
 end
 
 doofus = Santa.new("male", "Asian")
@@ -44,3 +55,7 @@ guy.celebrate_birthday
 guy.about
 guy.get_mad_at("Rudolph")
 guy.about
+guy.get_mad_at("Dancer")
+guy.about
+puts guy.gender
+puts guy.ethnicity
