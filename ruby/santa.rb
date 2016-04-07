@@ -1,6 +1,6 @@
 class Santa
-	attr_reader :ethnicity
-	attr_accessor :gender
+	attr_reader :ethnicity, :gender
+	attr_accessor :age
 
 	def initialize(gender, ethnicity)
 		puts "Initializing Santa instance"
@@ -65,3 +65,12 @@ guy.get_mad_at("Dancer")
 guy.about
 puts guy.gender
 puts guy.ethnicity
+
+santas = []
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+150.times do |i|
+  santas << Santa.new(example_genders.sample, example_ethnicities.sample)
+  santas[i].age = rand(140)
+  puts "New santa gender is #{santas[i].gender} and ethnicity is #{santas[i].ethnicity} and age is #{santas[i].age}"
+end
