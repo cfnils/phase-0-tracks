@@ -52,5 +52,31 @@ falgor.watch_tv("Seinfeld")
 falgor.is_evil = false
 falgor.watch_tv("Seinfeld")
 
+#User Interface
+puts "Welcome to the dragon creator 4000! How many dragons would you like to create?"
+how_many = gets.chomp.to_i
 
+dragon_array = []
+which = 1
+while which <= how_many
+	puts "What is dragon number #{which}'s name?"
+	name = gets.chomp
+	puts "What is dragon number #{which}'s age?"
+	age = gets.chomp.to_i
+	puts "Is #{name} evil? (y/n)"
+	evil = gets.chomp
+	if evil == "y"
+		is_evil = true
+	else
+		is_evil = false
+	end
+	dragon = Dragon.new(name, age, is_evil)
+	dragon_array.push(dragon)
+	which += 1
+end
+
+puts "Thank you! Confirmation of all newly created dragons:"
+dragon_array.each do |i|
+	puts "The dragon is named #{i.name}, is age #{i.age}, is evil is #{i.is_evil}"
+end
 
