@@ -1,0 +1,31 @@
+SELECT * FROM reviews JOIN users ON reviews.user_id = users.id JOIN businesses ON reviews.business_id = businesses.id;
+
+1|5|this place rocks!|1|2|2|Mandy|Kaling|1|Grundy Hollow Wedding Chapel
+2|3|meh|3|1|1|Bradford|Pitt|3|The Beagle Nightclub
+3|1|awful!|3|4|4|Steven|Wonder|3|The Beagle Nightclub
+4|5|awesome!|4|3|3|Angela|Jolie|4|Lotus Yoga
+
+
+SELECT businesses.name, users.First_name, users.Last_name, reviews.stars, reviews.comment FROM reviews JOIN users ON reviews.user_id = users.id JOIN businesses ON reviews.business_id = businesses.id;
+
+Grundy Hollow Wedding Chapel|Mandy|Kaling|5|this place rocks!
+The Beagle Nightclub|Bradford|Pitt|3|meh
+The Beagle Nightclub|Steven|Wonder|1|awful!
+Lotus Yoga|Angela|Jolie|5|awesome!
+
+
+SELECT 
+    businesses.name, 
+    users.First_name, 
+    users.Last_name, 
+    reviews.stars, 
+    reviews.comment 
+FROM reviews 
+JOIN users 
+ON reviews.user_id = users.id 
+JOIN businesses 
+ON reviews.business_id = businesses.id 
+WHERE businesses.name = "The Beagle Nightclub";
+
+The Beagle Nightclub|Bradford|Pitt|3|meh
+The Beagle Nightclub|Steven|Wonder|1|awful!
