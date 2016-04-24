@@ -1,0 +1,65 @@
+Display the information in one table (either table is fine).
+
+sqlite> SELECT * from books;
+1|Mastery|1|2012|true
+2|The 48 Laws of Power|1|1998|true
+3|The 50th Law|1|2009|false
+4|Trust me, I'm Lying|2|2012|true
+5|The Obstacle is the Way|2|2014|false
+6|Zero to One|3|2014|true
+7|Mindset|4|2007|false
+
+
+Update an item that meets some condition (you can choose a condition that makes sense).
+
+sqlite> UPDATE books SET in_stock="true" WHERE title LIKE '%bstacle%';
+sqlite> SELECT * from books;
+1|Mastery|1|2012|true
+2|The 48 Laws of Power|1|1998|true
+3|The 50th Law|1|2009|false
+4|Trust me, I'm Lying|2|2012|true
+5|The Obstacle is the Way|2|2014|true
+6|Zero to One|3|2014|true
+7|Mindset|4|2007|false
+
+
+Display the information in both tables using one query.
+
+sqlite> SELECT * FROM books JOIN authors ON books.author_id=authors.id; 
+1|Mastery|1|2012|true|1|Robert Greene
+2|The 48 Laws of Power|1|1998|true|1|Robert Greene
+3|The 50th Law|1|2009|false|1|Robert Greene
+4|Trust me, I'm Lying|2|2012|true|2|Ryan Holiday
+5|The Obstacle is the Way|2|2014|true|2|Ryan Holiday
+6|Zero to One|3|2014|true|3|Peter Thiel
+7|Mindset|4|2007|false|4|Carol Dweck
+
+
+Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+sqlite> SELECT books.title, authors.name FROM books JOIN authors ON books.author_id=authors.id;
+Mastery|Robert Greene
+The 48 Laws of Power|Robert Greene
+The 50th Law|Robert Greene
+Trust me, I'm Lying|Ryan Holiday
+The Obstacle is the Way|Ryan Holiday
+Zero to One|Peter Thiel
+Mindset|Carol Dweck
+
+Delete an item that meets some condition (you can choose a condition that makes sense).
+
+sqlite> DELETE FROM books WHERE author_id=3;
+sqlite> SELECT * FROM books JOIN authors ON books.author_id=authors.id;         1|Mastery|1|2012|true|1|Robert Greene
+2|The 48 Laws of Power|1|1998|true|1|Robert Greene
+3|The 50th Law|1|2009|false|1|Robert Greene
+4|Trust me, I'm Lying|2|2012|true|2|Ryan Holiday
+5|The Obstacle is the Way|2|2014|true|2|Ryan Holiday
+7|Mindset|4|2007|false|4|Carol Dweck
+
+
+Try a few different joins in your database, and record the commands and the output in queries.txt.
+
+sqlite> SELECT books.title, authors.name FROM books FULL OUTER JOIN authors ON books.author_id=authors.id;
+Error: RIGHT and FULL OUTER JOINs are not currently supported
+sqlite> SELECT books.title, authors.name FROM books JOIN authors ON books.author_id=authors.id WHERE year_published > 2012;
+The Obstacle is the Way|Ryan Holiday
