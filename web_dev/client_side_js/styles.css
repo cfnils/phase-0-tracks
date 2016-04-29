@@ -1,0 +1,225 @@
+body {
+	max-width: 1160px;
+	
+	position: relative;
+	}
+
+.foot {
+	max-width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	text-align: center;
+	border: solid 1px;
+	border-radius: 10px;
+	font-family: monospace;
+	font-weight: bold;
+	font-size: 125%;
+	padding: 10px 0px;
+	position: relative;
+	margin-top: 20px;
+}
+
+table {
+	border: solid green 2px;
+	background-color: black;
+	color: white;
+	padding: 10px;
+	width: 300px;
+	text-align: center;
+	margin: 10px auto;
+	
+	border-color: white;
+}
+h1, h2 {
+	text-align: center;
+	text-decoration: underline;
+}
+
+th {
+	text-decoration: underline;
+	text-align: center;
+	color: green;
+}
+
+#rankings {
+	border: solid 2px;
+	border-radius: 25px;
+	background-color: tan;
+	color: brown;
+	margin: 10px auto;
+}
+
+#rankings ol {
+	display: block;
+	margin: 5px auto;
+	width: 150px;
+	padding: 5px 20px;
+	}
+
+#rankings ol li {
+	text-align: center;
+}
+
+
+div > ul > li {
+	font-size: 1.5em;
+	font-weight: bold;
+	position: relative;
+	right: 250px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 600px;
+	padding: 5px;
+	color: red;
+	list-style-type: square;
+
+	
+}
+
+#survey {
+	position: relative;
+	top: 20%;
+	width: 60%;
+	margin: 10px 20% 10px 20%;
+	background-color: gray;
+	border-radius: 20px;
+	padding: 10px 20px;
+}
+
+form {
+	margin: 10px 40px;
+}
+
+ul {
+	margin: auto;
+	width: 150px;
+	display: block;
+	list-style: square;
+}
+
+.header {
+	background-image: url("golfbanner.jpg");
+	position: relative;
+	height: 400px;
+	background-size: 100% 400px;
+	color: white;
+	top: 0px;
+	width: 100%;
+	top: 0px;
+}
+
+#balls {
+	text-align: center;
+	background-color: orange;
+	border-radius: 15px;
+	padding: 10px;
+	margin: 5px 40px;
+}
+
+a:link {
+	color: inherit;
+}
+
+a:visited {
+	color: red;
+}
+
+a:hover {
+	background-color: grey;
+	border-radius: 10px;
+	padding: 10px;
+	font-size: 125%;
+}
+
+.headlinks {
+	width: 400px;
+	height: 50px;
+	display: inline-block;	
+	bottom: 10px;
+	margin: 0px 580px;
+	right: -200px;
+	position: absolute;
+	text-align: center;
+}
+
+.headlinks a {
+	margin: 0px 10px;
+	padding: 0px 2px;
+	border: solid 3px;
+	font-size: 200%;
+	border-radius: 10px;
+	text-decoration: none;
+}
+
+@media screen and (max-width: 800px) {
+	.headlinks {
+		display: block;
+		max-width: 40%;
+		height: 140px;
+		bottom: 35%;
+		left: 5%;
+		margin-left: 40px;
+		position: absolute;
+	}
+
+	.headlinks a {
+		display: block;
+		padding: 5px;
+		margin: 10px 5px 10px 5px;
+		max-width: 100%;
+		bottom: 10px;
+
+	}
+	#survey {
+		display: block;
+		max-width: 50%;
+		margin: 10px auto;
+		border: solid 2px;
+		position: relative;
+		border-radius: 40%;
+	}
+
+	form {
+		text-align: center;
+	}
+
+	 #rankings {
+	 	max-width: 30%;
+	 	padding: 5px;
+	 	position: relative;
+	 	margin: 10px ;
+	 	display: inline-block;
+	 }
+	 
+	 #balls {
+	 	border: solid 1px;
+	 	display: inline-block;
+	 	max-width: 50%;	
+	 	position: relative;
+	 	max-height: 200px;
+	 	padding: 5px;
+	 }
+
+	 .ballranking {
+	 	max-width: 100%;
+	 	vertical-align: baseline;
+	 	vertical-align: top;
+	 	display: inline-block;
+	 	position: relative;
+	 }
+	 
+	 .foot {
+	 	position: absolute;
+	 	width: 60%;
+	 	display: block;
+	 	margin: 10px 20%;
+	 }
+	 
+	 a:hover {
+	 	padding: 5px;
+	}
+	 
+	 	
+	
+}
