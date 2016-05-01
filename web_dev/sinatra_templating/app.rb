@@ -24,4 +24,15 @@ post '/students' do
   redirect '/'
 end
 
+#show students by location
+get '/students/location' do
+  @students = db.execute("SELECT * FROM students")
+  @students_sf = db.execute("SELECT * FROM students WHERE campus = 'SF'")
+  @students_sd = db.execute("SELECT * FROM students WHERE campus = 'SD'")
+  @students_ny = db.execute("SELECT * FROM students WHERE campus = 'NYC'")
+  @students_chi = db.execute("SELECT * FROM students WHERE campus = 'CHI'")
+  @students_sea = db.execute("SELECT * FROM students WHERE campus = 'SEA'")
+  erb :location
+end
+
 # add static resources
